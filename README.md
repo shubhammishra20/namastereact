@@ -18,7 +18,7 @@ So there are different functions, methods which are being used inside react nati
 The main file react.development.js is the core react thing and the other one is kind of like bridge between these react and browsers, So its like react dom which is like a bridge to connect to the dom
 
 Now, we as a developers have to use this super power and build these large scale application
-
+```
 <body>
 <div id="root"></div>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -36,4 +36,4 @@ Now, we as a developers have to use this super power and build these large scale
       root.render(heading)
 </script>
 </body>
-
+```
