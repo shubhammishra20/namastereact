@@ -62,8 +62,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(heading)
 ```
-//how do I create nested element?
+how do I create nested element?
 ```js
+//This type of structure
+/* <div id='root'>
+  <div id='parent'>
+    <div id='child'>
+      <h1>I am hi tag</h1>
+    </div>
+  </div>
+</div> */
 const parent = React.createElement(
   'div',
   { id: 'parent' },
