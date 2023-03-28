@@ -25,7 +25,7 @@ Now, we as a developers have to use this super power and build these large scale
 <div id="root"></div>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-<script>
+<script> ```
        //it is just creating an h1 element with "hello world..." inside react, That is a core react thing.
        //This h1 inside created react, So we will use react.
        ```js
@@ -41,7 +41,8 @@ Now, we as a developers have to use this super power and build these large scale
       //Everything that we will render, We will render inside this root
       ```js
      root.render(heading)
-     ```
+    ```
+    ```js
 </script>
 </body>
 ```
