@@ -30,6 +30,8 @@ Now, we as a developers have to use this super power and build these large scale
        //This h1 inside created react, So we will use react.
  
     const heading = React.createElement("h1", {}, "Hello world from react")
+    
+    console.log("hello world!)
        
        //but now When we have to put this h1 into a dom onto are browsers,
        // So that we will use the RectDom libraries createRoot method.
