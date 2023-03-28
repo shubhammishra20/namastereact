@@ -1,10 +1,12 @@
 # namastereact
 It is my first react project using react CDN link.
 # React using CDN :
+```js
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
 </script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js">
 </script>
+```
 Why are there two files?
 First file is the react.development.js. This is the core file of react or core react framework algorithm which is written inside it.
 
@@ -18,22 +20,28 @@ So there are different functions, methods which are being used inside react nati
 The main file react.development.js is the core react thing and the other one is kind of like bridge between these react and browsers, So its like react dom which is like a bridge to connect to the dom
 
 Now, we as a developers have to use this super power and build these large scale application
-
+```js
 <body>
 <div id="root"></div>
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 <script>
-       //it is just creating an h1 element with "hello world..." inside react, That is a core react thing.
-       //This h1 inside created react, So we will use react.
-       const heading = React.createElement("h1", {}, "Hello world from react")
-       //but now When we have to put this h1 into a dom onto are browsers,
-       // So that we will use the RectDom libraries createRoot method.
+       //it is just creating an h1 element with "hello world..." inside react, That is a core react thing
+       //This h1 inside created react, So we will use react
+ 
+    const heading = React.createElement("h1", {}, "Hello world from react")
+    
+       
+       //but now When we have to put this h1 into a dom onto are browsers
+       // So that we will use the RectDom libraries createRoot method
        //this will create root first of all
        // the root is place where all the react code will run
-       const root = ReactDOM.createRoot(document.getElementById("root"))
+      
+    const root = ReactDOM.createRoot(document.getElementById("root"))
+     
       //Everything that we will render, We will render inside this root
-      root.render(heading)
+    
+   root.render(heading)
 </script>
 </body>
-
+```
