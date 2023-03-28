@@ -156,3 +156,7 @@ const parent = React.createElement(
 //If we have even more complex structure, think about the code it will become later on its very complicated 
 //This is why there is somthing known as JSX that exit
 //React is only written using JSX
+
+This is last time we are using React.createElement,we will no longer using React.createElement,but I wanted to show you to the core of React this is how we create h1 element, div or ... inside react.
+When we do modern react development then we have to need understand of react core thing,
+But right now,We are going to use JSX.
