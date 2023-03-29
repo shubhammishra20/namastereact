@@ -160,3 +160,22 @@ const parent = React.createElement(
 /*This is last time we are using React.createElement,we will no longer using React.createElement,but I wanted to show you to the core of React this is how we create h1 element, div or ... inside react.
 When we do modern react development then we have to need understand of react core thing,
 But right now,We are going to use JSX.*/
+
+When we push script tag (<script src="App.js"> </script>) inside head or before <div id = "root"> </div> then come error, why?
+Ans- The reason for this is that HTML loads from top to bottom. The head loads first, then the body, and then everything inside the body. If we put our JavaScript in the head section, the entire JavaScript will load before loading any of the HTML
+It means that javaScript code didn't find the HTML root because javaScript code loaded before HTML code ---> (Top to Bottom)
+```js
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>namasteReact</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="App.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+```
