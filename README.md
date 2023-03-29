@@ -63,7 +63,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(heading)
 //Suppose If inside <div> <h1> Hello world!</h1> </div> already existed element (h1) when I am rendering 'heading' inside 'div' then what will happen?
 Ans -
-//It is replace with 'heading'element whatever existed already inside 'root'--->>
+//It is replace with 'heading' (Whatever passing inside render methode) element whatever already existed inside 'root'--->>
 <div id = 'root'> <h1 id='heading' xyz = 'xyz'>Hello world! from react</h1> </div>
 ```
 how do I create nested element?
