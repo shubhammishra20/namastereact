@@ -1,5 +1,8 @@
 # namastereact
 It is my first react project using react CDN link.
+Important basic- React is a library because react we can apply small portion our page itself
+Ex - react can work on footer only, react can work on header only, react can work on sidebar only --etc
+React only work in the place whatever we make root as
 # React using CDN :
 ```js
 <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js">
