@@ -4,6 +4,7 @@ It is my first react project using react CDN link.
 Important basic- React is a library because react we can apply small portion our page itself
 Ex - react can work on footer only, react can work on header only, react can work on sidebar only --etc
 React only work in the place whatever we make root as
+React can work in our existing app as well
 ```
 # React using CDN :
 ```js
