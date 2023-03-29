@@ -61,6 +61,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 //converted into heading (h1) tag and put it up on the DOM(In the <div></div>)
 
 root.render(heading)
+//When we do roo.render It will just replace everything inside root with whatever I am passing in from react, So kind of react has taken control over this div(<div id='root'> </div>) now.
 //Suppose If inside <div> <h1> Hello world!</h1> </div> already existed element (h1) when I am rendering 'heading' inside 'div' then what will happen?
 Ans -
 //It is replace with 'heading' (Whatever passing inside render methode) element whatever already existed inside 'root'--->>
