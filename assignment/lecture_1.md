@@ -8,6 +8,8 @@ Framework come with alot of baggage along with it, React does not come up with a
 CDN is content delivery network, also called a content distribution network. These are the website where this react has been hoisted and we are just pulling react from there into our project.
 So, Basically CDN is place where that react library is hoisted. So we are just fetching that react, we putting into the our code using CDN link.
 Why do we use CDN? Because CDN is save temporary copy of data inside our memory in the all over world (different locaton or country) that's why if anyone accessing my website then they can easly get (very fast get the data and good user experience) data From their nearest location.
+# createElement 
+(https://react.dev/reference/react/createElement)
 # Why is react known as React?
 And it's called React because it reacts. It was developed by Facebook (a site that CONSTANTLY updates their data) to improve the user interface development and more effectively change (REACT to) what the user sees when they're doing things like mouse clicking, submitting and typing.
 # What is cross-origin inside script tag?
