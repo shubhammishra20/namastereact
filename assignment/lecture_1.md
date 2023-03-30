@@ -31,3 +31,9 @@ Hot reloading allows you to see the changes that you have made in the code witho
 
 Production mode minifies your code and better represents the performance your app will have on end users' devices.he production build runs uglify and builds your source files into one or multiple minimized files. It also extracts CSS and images and of course any other sources you're loading with Webpack. There's also no hot reloading included.
 (https://www.geeksforgeeks.org/how-to-tell-reactjs-to-build-project-in-production-mode/)
+# What is async and defer?
+In normal, HTML parsing goes on, as soon as script tag is encounterd, the script are fetch from the network and there an then they are executed and after that HTML parsing continues.
+
+In async tag, The HTML parsing goes on and the script are fetched in async manner(parallel) and as soon as script are available the script is executed after only HTML parasing continues. Async attribute does not guranteed the order of execution of the script but defer does.
+
+In defer tag, The HTML parsing goes on and the script are fetched in parallel and only executed once the HTML parsing is complete. Defer attribute does guranteed the order of execution of the script.
