@@ -43,7 +43,7 @@ So 'package.json' keeps a approxe version of it and 'package-lock.json' has exac
 What is this integrity in package-lock.json?</br>
 Integrity is basically ```hash```. A ```sha512``` is hash</br>
 Why is this ```hash``` present over there? </br>
-This ```hash``` is because (we listend a lot of developer say's, Its working on my local but its not  working on my production) basically to avoid that package-lock.json, keeps a hash to verify that whatever is there right now in my dev machine, is the same version which is being deployed on to the production.
+This ```hash``` is because (we listend a lot of developer say's, Its (code) working on my local but its not  working on my production) basically to avoid that package-lock.json, keeps a hash to verify that whatever is there right now in my dev machine, is the same version which is being deployed on to the production.
 # node_modules
 This node_modules contains all the code that we fetch from npm. When we did ```npm install -D parcel``` what happend was it just went to the production and it took some timing and it was fetching all the code of 'parcel' puting in inside 'node_modules'</br>
 node_modules kind of like a database it contains the actual data of that dependencies of those packages that our project need</br>
