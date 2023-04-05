@@ -9,7 +9,7 @@ Developer life is not easy using core of react(```React.createElement('h1',{id: 
 That's why now, We will never be using ```React.createElement```(core of react) ever again.
 jsx is not react, jsx is the convention where we kind of merge the HTML and JS together.</br>
 How can I create 'h1' tag using jsx? </br>
-const jsxHeading = <h1>namaste react using jsx</h1> //jsx is not HTML inside javaScript But jsx is HTML-Like or XML-Like syntax.</br>
+```const jsxHeading = <h1>namaste react using jsx</h1>``` //jsx is not HTML inside javaScript But jsx is HTML-Like or XML-Like syntax.</br>
 JSX is not a valid pure javaScript because JS engine not able to read this code --->> ```<h1>namaste react using jsx</h1>```</br>
 If javaScript engine not able to read this code then how is this code working? Why? </br>
 Beacuse ```parcel``` (using ```Babel```, parcel is already installed that package, parcel is working like managers for the Babel) is doing the job behind the scenes even before whole code goes to the browser, It is transpiled before it goes to the JS engine and then JS is receives the code that browser can understand.</br>
