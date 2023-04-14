@@ -95,7 +95,7 @@ We will have to remove that line (```"main": "App.js"```) from package.json .</b
 When it builds a production ready app, where does that build goes up?</br>
 When we do ```npx parcel build index.html```----->> it wiil bundle, it will minify,compress,it will all the crazy stuff and it will put all those files inside the new folder which is ```dist``` folder . and it build 3 files</br>
 Suppose if our app will have 10 or 20 files, It will compress everything, minify everything to these 3 files. and now these 3 files will contain all the code that we write, These 3 files are the production ready code for our app. </br>
-after generating build when we go to the display or our computer screen whatever where we saw on UI side, All things (whatever code developrd ----> index.html, App.js, index.css --etc) come from ```dist``` folder. and when we refresh the page or save file, it is uses the ```.parcel-cache``` and ```dist``` folder to update using that ```HMR``` (Hot Modele Replacement).
+after generating build when we go to the display or our computer screen whatever we see on UI side, All things (whatever code developrd ----> index.html, App.js, index.css --etc) come from ```dist``` folder. and when we refresh the page or save file, it is uses the ```.parcel-cache``` and ```dist``` folder to update using that ```HMR``` (Hot Modele Replacement).
 # let's make our app compatible for the older versions of the browsers.
 So for that we will use somthing known as ```browserslist```.</br>
 So now we have to tell our project that what all browsers should our app be supported in.</br>
