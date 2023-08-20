@@ -1,4 +1,4 @@
-import RestaurantCard from './RestaurantCard'
+import RestaurantCard, {withPromotedLabel} from './RestaurantCard'
 // import resList from '../utils/mockData'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -16,6 +16,9 @@ const Body = () => {
   const [seatchText, setSearchText] = useState('')
   const [list, setList] = useState(null)
   const [fltrList, setFltrList] = useState([])
+
+const RestaurantCardPromoted = withPromotedLabel(RestaurantCard)
+
   const upadteList = e => {
     setSearchText(e.target.value)
   }
@@ -24,17 +27,16 @@ const Body = () => {
       'https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9180865&lng=77.6051008&page_type=DESKTOP_WEB_LISTING'
     )
     json = await data.json()
-    const cardList = json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+    const cardList =
+      json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     setList(cardList)
     setFltrList(cardList)
     console.log(cardList)
   }
   const onlineStatus = useOnlineStaus()
 
-  if(onlineStatus === false) {
-    return (
-    <h1>you are Offline, Please check your internet!!</h1>
-    )
+  if (onlineStatus === false) {
+    return <h1>you are Offline, Please check your internet!!</h1>
   }
   useEffect(() => {
     getApiData()
@@ -44,15 +46,16 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className='body'>
-      <div>
+      <div className='m-4 p-4'>
         <input
           type='text'
-          className='search-input'
+          className='border border-black border-solid'
           placeholder='Search'
           value={seatchText}
           onChange={upadteList}
         />
         <button
+          className='px-4 py-2 bg-green-100 m-4 rounded-lg'
           onClick={() => {
             const data = filterList(seatchText, fltrList)
             setList(data)
@@ -61,12 +64,13 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className='res-container'>
-        {list && list.map(val => (
-          <Link key={val?.info.id} to={`/restaurant/${val?.info.id}`}>
-            <RestaurantCard resData={val?.info} />
-          </Link>
-        ))}
+      <div className='flex flex-wrap ml-64 mr-1'>
+        {list &&
+          list.map(val => (
+            <Link key={val?.info.id} to={`/restaurant/${val?.info.id}`}>
+              {val?.info?.aggregatedDiscountInfoV3?.header || val?.info?.aggregatedDiscountInfoV3?.subHeader ? <RestaurantCardPromoted resData={val?.info} /> : <RestaurantCard resData={val?.info} />}
+            </Link>
+          ))}
       </div>
     </div>
   )
