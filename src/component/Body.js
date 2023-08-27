@@ -1,9 +1,10 @@
 import RestaurantCard, {withPromotedLabel} from './RestaurantCard'
 // import resList from '../utils/mockData'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Shimmer from './Shimmer'
 import useOnlineStaus from '../utils/useOnlineStatus'
+import UserContext from '../utils/UserContext'
 
 const filterList = (seatchInput, dataList) => {
   const filtData = dataList.filter(listData => {
@@ -16,7 +17,7 @@ const Body = () => {
   const [seatchText, setSearchText] = useState('')
   const [list, setList] = useState(null)
   const [fltrList, setFltrList] = useState([])
-
+  const {logedInUser, setUserName} = useContext(UserContext)
 const RestaurantCardPromoted = withPromotedLabel(RestaurantCard)
 
   const upadteList = e => {
@@ -63,12 +64,19 @@ const RestaurantCardPromoted = withPromotedLabel(RestaurantCard)
         >
           Search
         </button>
+        <input
+          type='text'
+          className='border border-black border-solid'
+          placeholder='Name'
+          value={logedInUser}
+          onChange={(e) => setUserName(e.target.value)}
+        />
       </div>
       <div className='flex flex-wrap ml-64 mr-1'>
         {list &&
           list.map(val => (
             <Link key={val?.info.id} to={`/restaurant/${val?.info.id}`}>
-              {val?.info?.aggregatedDiscountInfoV3?.header || val?.info?.aggregatedDiscountInfoV3?.subHeader ? <RestaurantCardPromoted resData={val?.info} /> : <RestaurantCard resData={val?.info} />}
+              {val?.info?.avgRating <= 4.1 ? <RestaurantCardPromoted resData={val?.info} /> : <RestaurantCard resData={val?.info} />}
             </Link>
           ))}
       </div>

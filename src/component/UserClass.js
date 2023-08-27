@@ -1,5 +1,4 @@
 import React from 'react'
-
 class UserClass extends React.Component {
   constructor (props) {
     super(props)
@@ -10,11 +9,11 @@ class UserClass extends React.Component {
             location: "Default"
         }
     }
-    console.log(this.props.name +'Child Constructor');
+   // console.log(this.props.name +'Child Constructor');
   }
 
  async componentDidMount() {
-    console.log(this.props.name +'Child Component Did Mount');
+    //console.log(this.props.name +'Child Component Did Mount');
   // API Call
 
    const data  = await fetch('https://api.github.com/users/shubhammishra20')
@@ -22,7 +21,7 @@ class UserClass extends React.Component {
    this.setState({
     info: json
    })
-   console.log(json)
+   //console.log(json)
 }
 
 componentDidUpdate() {
@@ -33,12 +32,11 @@ componentDidUpdate() {
 }
 
 componentWillUnmount() {
-  console.log('Component Will Unmount');
+ // console.log('Component Will Unmount');
   clearInterval(this.aka)
 }
-
   render () {
-    console.log(this.props.name +'Child Render');
+    //console.log(this.props.name +'Child Render');
     const { name, location, avatar_url } = this.state.info
     return (
       <div className='user-card'>
