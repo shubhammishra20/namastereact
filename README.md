@@ -18,3 +18,11 @@
  *    - Contact
  *
  */
+
+# Redux Toolkit
+- install @reactjs/toolkit and react-redux
+- Build our store
+- Connect our store to our app
+- create Slice (cartSlice)
+- dispatch (action)
+- selector(to subscribing)
